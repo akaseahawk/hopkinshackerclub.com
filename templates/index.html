@@ -4,42 +4,51 @@
   </head>
 
   <body>
-  <!--bootstrap-->
-  <script src="//code.jquery.com/jquery.min.js"></script>
-  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <link href="/static/css/style.css" rel="stylesheet">
+    <div class = 'page'>
+      <div class = 'container-fluid' style='padding:0; margin:0;'>
+        <div class='row inline-block-row' style='padding:0; margin:0;'>
+          <div class='col-sm-12 col-md-6' style='padding:0; margin:0;'>
+            <div id='introImg' class='intro' style='height:500px;'>
+              <div class='vertOffCenter'>
+                <h1 class = 'tightText' style = 'color: white; font-size:500%'>LOGO</h1>
+                <h1 class = 'tightText' style = 'color: white; font-size:500%'>HERE</h1>
+              </div>
+            </div>
+            <script>
+              h = window.innerHeight;
+              w = window.innerWidth;
+              //since we want it to fill the whole screen on small
+              //and else, fill half of the screen
+              if(w>576){
+                w = w/2;
+              }
+              var heightStr = h.toString()+'px';
+              var widthStr = w.toString()+'px';
+              document.getElementById('introImg').style.height=heightStr;
+              document.getElementById('introImg').style.width=widthStr;
+            </script>
+          </div>
+          <div class='col-sm-12 col-md-6'>
+            <h1 class='title'>Announcements</h1>
+            <table>
+              <!-- The function that returns announcements will be sure
+                   to return a small enough number so format is ok -->
+              {% for elem in announcements %}
+                <tr>
+                  <th> {{ elem.0 }} </th>
+                  <td> {{ elem.1 }} </td>
+                </tr>
+              {% endfor %}
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
 
-     <div class="container-fluid">
-       <h1>Inline Block Grid</h1>
-       <div class="row inline-block-row">
-          <div class="col-sm-4 col-md-3">
-             <div class="well height1">1</div>
-          </div>
-          <div class="col-sm-4 col-md-3">
-             <div class="well">2</div>
-          </div>
-          <div class="col-sm-4 col-md-3">
-             <div class="well">3</div>
-          </div>
-          <div class="col-sm-4 col-md-3">
-             <div class="well"> 4</div>
-          </div>
-          <div class="col-sm-4 col-md-3">
-             <div class="well"> 5</div>
-          </div>
-          <div class="col-sm-4 col-md-3">
-             <div class="well height2"> 6</div>
-          </div>
-          <div class="col-sm-4 col-md-3">
-             <div class="well"> 7</div>
-          </div>
-          <div class="col-sm-4 col-md-3">
-             <div class="well height1"> 7</div>
-          </div>
-          <div class="col-sm-4 col-md-3">
-             <div class="well"> 7</div>
-          </div>
-       </div>
-     </div>
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
   </body>
 </html>
