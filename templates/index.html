@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html>
+
   <head>
+    <link href="/static/css/style.css" rel="stylesheet">
   </head>
 
   <body>
-    <link href="/static/css/style.css" rel="stylesheet">
     <div class = 'page'>
       <div class = 'container-fluid' style='padding:0; margin:0;'>
         <div class='row inline-block-row' style='padding:0; margin:0;'>
           <div class='col-sm-12 col-md-6' style='padding:0; margin:0;'>
-            <div id='introImg' class='intro' style='height:500px;'>
+            <div id='introImg' class='intro' style ='height:500px;'>
               <div class='vertOffCenter'>
                 <h1 class = 'tightText' style = 'color: white; font-size:500%'>LOGO</h1>
                 <h1 class = 'tightText' style = 'color: white; font-size:500%'>HERE</h1>
@@ -20,8 +21,13 @@
               w = window.innerWidth;
               //since we want it to fill the whole screen on small
               //and else, fill half of the screen
-              if(w>576){
+              if(w>918){
                 w = w/2;
+              }
+              else{
+                //accounts for the scroll bar
+                //TODO find a better solution for this
+                w = w-17
               }
               var heightStr = h.toString()+'px';
               var widthStr = w.toString()+'px';
@@ -29,15 +35,15 @@
               document.getElementById('introImg').style.width=widthStr;
             </script>
           </div>
-          <div class='col-sm-12 col-md-6'>
+          <div class='col-sm-12 col-md-6' style='padding:0; margin:0;'>
             <h1 class='title'>Announcements</h1>
-            <table>
+            <table class='announcementTable'>
               <!-- The function that returns announcements will be sure
                    to return a small enough number so format is ok -->
               {% for elem in announcements %}
                 <tr>
-                  <th> {{ elem.0 }} </th>
-                  <td> {{ elem.1 }} </td>
+                  <th class='announcementTableHeader'> {{ elem.0 }} </th>
+                  <td class='announcementTableData'> {{ elem.1 }} </td>
                 </tr>
               {% endfor %}
             </table>

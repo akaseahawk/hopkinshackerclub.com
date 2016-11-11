@@ -35,3 +35,20 @@
   top: 35%;
   transform: translateY(-35%);
 }
+
+.announcementTable {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.announcementTableHeader {
+  color:white;
+  border:1px solid;
+  padding-top: 12px;
+}
+
+.announcementTableData {
+  color:white;
+  border:1px solid;
+  padding-top: 12px;
+}
