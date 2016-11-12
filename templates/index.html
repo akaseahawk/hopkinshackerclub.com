@@ -8,10 +8,11 @@
   <body>
     <div class = 'page'>
       <div class = 'container-fluid' style='padding:0; margin:0;'>
-        <div class='row inline-block-row' style='padding:0; margin:0;'>
-          <div class='col-sm-12 col-md-6' style='padding:0; margin:0;'>
+
+        <!-- Left Side -->
+          <div class='left'>
             <div id='introImg' class='intro' style ='height:500px;'>
-              <div class='vertOffCenter'>
+              <div class='vertCenter fade-in'>
                 <h1 class = 'tightText' style = 'color: white; font-size:500%'>LOGO</h1>
                 <h1 class = 'tightText' style = 'color: white; font-size:500%'>HERE</h1>
               </div>
@@ -35,22 +36,49 @@
               document.getElementById('introImg').style.width=widthStr;
             </script>
           </div>
-          <div class='col-sm-12 col-md-6' style='padding:0; margin:0;'>
-            <h1 class='title'>Announcements</h1>
-            <table class='announcementTable'>
-              <!-- The function that returns announcements will be sure
-                   to return a small enough number so format is ok -->
-              {% for elem in announcements %}
-                <tr>
-                  <th class='announcementTableHeader'> {{ elem.0 }} </th>
-                  <td class='announcementTableData'> {{ elem.1 }} </td>
-                </tr>
-              {% endfor %}
-            </table>
-          </div>
+        <!-- End Left Side -->
+
+        <!-- Right Side -->
+          <div class='right'>
+          <!-- Section - About Us -->
+          <section id="about" class="wrapper">
+            <h1 class = 'title-white'>About Us</h1>
+            <h1 class = 'title-about-white'>Put description here. Put description here.
+            Put description here. Put description here. Put description here.</h1>
+          </section>
+          <!-- End Section - About Us -->
+
+
+          <!-- Section - Announcements -->
+          <section id="announcements" class="wrapper style1">
+              <h2 class="title-black">Announcements</h2>
+              <table class='announcementTable'>
+                <!-- The function that returns announcements will be sure
+                     to return a small enough number so format is ok -->
+                {% for elem in announcements %}
+                  <tr>
+                    <th class='announcementTableHeader'> {{ elem.0 }} </th>
+                    <td class='announcementTableData'> {{ elem.1 }} </td>
+                  </tr>
+                {% endfor %}
+              </table>
+          </section>
+          <!-- End Section - Announcements -->
+
+          <!-- Section - Projects -->
+          <section id="announcements" class="wrapper">
+              <h1 class="title-white">Projects</h2>
+                <h1 class = 'title-about-white'>Put projects here.
+                and some more projects. and some more projects.
+                and some more projects. and some more projects.</h1>
+
+          </section>
+          <!-- End Section - Projects -->
+        <!-- End Right Side -->
+
+        </div>
         </div>
       </div>
-    </div>
 
     <script src="//code.jquery.com/jquery.min.js"></script>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" type="text/css" />

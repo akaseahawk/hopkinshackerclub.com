@@ -1,5 +1,5 @@
 .page{
-  background-color: gray;
+  background-color: black;
   padding: 0;
   margin: 0;
 }
@@ -14,10 +14,59 @@
   background-size: cover;
 }
 
-.title{
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fade-in {
+  opacity:0;  /* make things invisible upon start */
+  -webkit-animation:fadeIn ease-in 1;
+  -moz-animation:fadeIn ease-in 1;
+  animation:fadeIn ease-in 1;
+
+  -webkit-animation-fill-mode:forwards;
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+
+  -webkit-animation-duration:1.23s;
+  -moz-animation-duration:1.23s;
+  animation-duration:1.23s;
+}
+
+.title-white{
   text-align: center;
   color: white;
+  font-family: Futura, “Trebuchet MS”, Arial, sans-serif;
+  font-weight: bold;
+  margin-top: 170px;
 }
+
+.title-about-white{
+  text-align: left;
+  color: white;
+  font-size: 17.5px;
+  font-family: Futura, “Trebuchet MS”, Arial, sans-serif;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.title-black{
+  text-align: center;
+  color: black;
+  font-family: Futura, “Trebuchet MS”, Arial, sans-serif;
+  font-weight: bold;
+  margin-top: 170px;
+}
+
+.title-about-black{
+  text-align: left;
+  color: black;
+  font-size: 17.5px;
+  font-family: Futura, “Trebuchet MS”, Arial, sans-serif;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
 
 .tightText{
   padding: 0;
@@ -38,17 +87,48 @@
 
 .announcementTable {
   border-collapse: collapse;
-  width: 100%;
+  width: 90%;
+  margin-left: 30px;
 }
 
 .announcementTableHeader {
-  color:white;
+  color:black;
   border:1px solid;
   padding-top: 12px;
 }
 
 .announcementTableData {
-  color:white;
+  color:black;
   border:1px solid;
   padding-top: 12px;
 }
+
+.wrapper {
+	padding: 6em 0 4em 0;
+  height:100vh;
+}
+
+	.wrapper h1 {
+		color: white;
+	}
+
+  .wrapper h2 {
+		color: black;
+	}
+
+	.wrapper.style1 {
+		background: white;
+		color: black;
+	}
+
+.right {
+    width: 50%;
+    height: 100%;
+    overflow: auto;
+  }
+
+.left {
+    float: left;
+    width: 50%;
+    height: 100%;
+  }
