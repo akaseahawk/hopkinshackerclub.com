@@ -5,13 +5,16 @@
 }
 
 .intro{
-  width: 100%;
+  max-width: 100%;
   height: auto;
+  width: auto\9;
   padding: 0;
   margin: 0;
   text-align: center;
   background: url('../img/testImg.jpg') no-repeat scroll;
   background-size: cover;
+  background-repeat:   no-repeat;
+  background-position: center center;
 }
 
 @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
