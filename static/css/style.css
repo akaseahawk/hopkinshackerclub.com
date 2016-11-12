@@ -1,5 +1,5 @@
 .page{
-  background-color: black;
+  background-color: #141414;
   padding: 0;
   margin: 0;
 }
@@ -55,7 +55,7 @@
 
 .title-black{
   text-align: center;
-  color: black;
+  color: #141414;
   font-family: Futura, “Trebuchet MS”, Arial, sans-serif;
   font-weight: bold;
   margin-top: 170px;
@@ -63,7 +63,7 @@
 
 .title-about-black{
   text-align: left;
-  color: black;
+  color: #141414;
   font-size: 17.5px;
   font-family: Futura, “Trebuchet MS”, Arial, sans-serif;
   margin-left: 30px;
@@ -95,13 +95,13 @@
 }
 
 .announcementTableHeader {
-  color:black;
+  color:#141414;
   border:1px solid;
   padding-top: 12px;
 }
 
 .announcementTableData {
-  color:black;
+  color:#141414;
   border:1px solid;
   padding-top: 12px;
 }
@@ -116,15 +116,21 @@
 	}
 
   .wrapper h2 {
-		color: black;
+		color: #141414;
 	}
+
+  .wrapper img {
+    margin-left: auto;
+    margin-right: auto;
+  }
 
 	.wrapper.style1 {
 		background: white;
-		color: black;
+		color: #141414;
 	}
 
 .right {
+    margin-left: auto;
     width: 50%;
     height: 100%;
     overflow: auto;
@@ -134,4 +140,11 @@
     float: left;
     width: 50%;
     height: 100%;
+    position: fixed;
+    z-index: 0;
   }
+
+.imgCenter{
+  text-align: center;
+  margin-top: 30px;
+}
