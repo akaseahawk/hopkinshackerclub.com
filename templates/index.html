@@ -3,6 +3,7 @@
 
   <head>
     <link href="/static/css/style.css" rel="stylesheet">
+    <script src="//code.jquery.com/jquery.min.js"></script>
   </head>
 
   <body>
@@ -45,11 +46,27 @@
             <h1 class = 'title-white'>About Us</h1>
             <h1 class = 'title-about-white'>Put description here. Put description here.
             Put description here. Put description here. Put description here.</h1>
-            <h1 class="imgCenter"><a href="#announcements" class = "title">
-            <img src="/static/img/downArrow.png"></img></a></h1>
+
+            <!--
+              <h1 class="imgCenter"><a href="#announcements" class = "title">
+              <img src="/static/img/downArrow.png"></img></a></h1>
+            -->
+            <div style='text-align:center; margin:auto;'>
+              <input id='scrollButton' type='image'src='/static/img/downArrow.png'/>
+            </div>
+            <!-- This is the script for scrolling-->
+            <script>
+              $('#scrollButton').click(
+                function(){
+                  $('html, body').animate(
+                    {scrollTop: $('#announcements').offset().top},
+                    'slow'
+                  );
+                }
+              );
+            </script>
           </section>
           <!-- End Section - About Us -->
-
 
           <!-- Section - Announcements -->
           <section id="announcements" class="wrapper style1">
@@ -68,8 +85,8 @@
           <!-- End Section - Announcements -->
 
           <!-- Section - Projects -->
-          <section id="announcements" class="wrapper">
-              <h1 class="title-white">Projects</h2>
+          <section class="wrapper">
+              <h1 id='projects' class="title-white">Projects</h2>
                 <h1 class = 'title-about-white'>Put projects here.
                 and some more projects. and some more projects.
                 and some more projects. and some more projects.</h1>
@@ -82,7 +99,6 @@
         </div>
       </div>
 
-    <script src="//code.jquery.com/jquery.min.js"></script>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 

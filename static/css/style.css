@@ -70,7 +70,6 @@
   margin-right: 30px;
 }
 
-
 .tightText{
   padding: 0;
   margin: 0;
@@ -111,38 +110,38 @@
   height:100vh;
 }
 
-	.wrapper h1 {
-		color: white;
-	}
+.wrapper h1 {
+	color: white;
+}
 
-  .wrapper h2 {
-		color: #141414;
-	}
+.wrapper h2 {
+	color: #141414;
+}
 
-  .wrapper img {
-    margin-left: auto;
-    margin-right: auto;
-  }
+.wrapper img {
+  margin-left: auto;
+  margin-right: auto;
+}
 
-	.wrapper.style1 {
-		background: white;
-		color: #141414;
-	}
+.wrapper.style1 {
+	background: white;
+	color: #141414;
+}
 
 .right {
-    margin-left: auto;
-    width: 50%;
-    height: 100%;
-    overflow: auto;
-  }
+  margin-left: auto;
+  width: 50%;
+  height: 100%;
+  overflow: auto;
+}
 
 .left {
-    float: left;
-    width: 50%;
-    height: 100%;
-    position: fixed;
-    z-index: 0;
-  }
+  float: left;
+  width: 50%;
+  height: 100%;
+  position: fixed;
+  z-index: 0;
+}
 
 .imgCenter{
   text-align: center;
