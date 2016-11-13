@@ -70,7 +70,6 @@
   margin-right: 30px;
 }
 
-
 .tightText{
   padding: 0;
   margin: 0;
@@ -111,40 +110,118 @@
   height:100vh;
 }
 
-	.wrapper h1 {
-		color: white;
-	}
+.wrapper h1 {
+	color: white;
+}
 
-  .wrapper h2 {
-		color: #141414;
-	}
+.wrapper h2 {
+	color: #141414;
+}
 
-  .wrapper img {
-    margin-left: auto;
-    margin-right: auto;
-  }
+.wrapper img {
+  margin-left: auto;
+  margin-right: auto;
+}
 
-	.wrapper.style1 {
-		background: white;
-		color: #141414;
-	}
+.wrapper.style1 {
+	background: white;
+	color: #141414;
+}
 
 .right {
-    margin-left: auto;
-    width: 50%;
-    height: 100%;
-    overflow: auto;
-  }
+  margin-left: auto;
+  width: 50%;
+  height: 100%;
+  overflow: auto;
+}
 
 .left {
-    float: left;
-    width: 50%;
-    height: 100%;
-    position: fixed;
-    z-index: 0;
-  }
+  float: left;
+  width: 50%;
+  height: 100%;
+  position: fixed;
+  z-index: 0;
+}
 
 .imgCenter{
   text-align: center;
   margin-top: 30px;
+}
+
+#wrapperHeader{
+}
+
+#header{
+  background:url('../img/testImg.jpg') no-repeat;
+  width:0%;
+  height:0px;
+}
+
+@media screen and (max-width: 750px) {
+  .left {
+      width: 0%;
+      height: 0%;
+    }
+
+  .right {
+    margin-top: auto;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+  }
+
+  .imgCenter{
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .title-white{
+    text-align: center;
+    color: white;
+    font-family: Futura, “Trebuchet MS”, Arial, sans-serif;
+    font-weight: bold;
+    margin-top: 50px;
+  }
+
+  .title-about-white{
+    text-align: left;
+    color: white;
+    font-size: 17.5px;
+    font-family: Futura, “Trebuchet MS”, Arial, sans-serif;
+    margin-left: auto;
+  }
+
+  .title-black{
+    text-align: center;
+    color: #141414;
+    font-family: Futura, “Trebuchet MS”, Arial, sans-serif;
+    font-weight: bold;
+    margin-top: 50px;
+  }
+
+  .title-about-black{
+    text-align: left;
+    color: #141414;
+    font-size: 17.5px;
+    font-family: Futura, “Trebuchet MS”, Arial, sans-serif;
+    margin-left: auto;
+  }
+
+  .tightText{
+    padding: 0;
+    margin: 0;
+    color: white;
+    font-size: 0%;
+  }
+
+  #wrapperHeader{
+    position: relative;
+    background-image:url('/static/img/');
+  }
+
+  #header{
+    background:url('../img/testImg.jpg') no-repeat;
+    width:100%;
+    height:100%;
+  }
 }
