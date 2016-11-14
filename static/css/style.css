@@ -184,11 +184,10 @@
   }
 
   .title-about-white{
-    text-align: left;
+    text-align: center;;
     color: white;
     font-size: 17.5px;
     font-family: Futura, “Trebuchet MS”, Arial, sans-serif;
-    margin-left: auto;
   }
 
   .title-black{
@@ -200,11 +199,10 @@
   }
 
   .title-about-black{
-    text-align: left;
+    text-align: center;;
     color: #141414;
     font-size: 17.5px;
     font-family: Futura, “Trebuchet MS”, Arial, sans-serif;
-    margin-left: auto;
   }
 
   .tightText{
