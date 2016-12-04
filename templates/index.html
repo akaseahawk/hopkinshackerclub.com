@@ -72,6 +72,9 @@
           <section id="announcements" class="wrapper style1">
               <h2 class="title-black">Announcements</h2>
               <table class='announcementTable'>
+                <style>
+                  tr:hover {background-color: #00ffbf}
+                </style>
                 <!-- The function that returns announcements will be sure
                      to return a small enough number so format is ok -->
                 {% for elem in announcements %}
@@ -86,10 +89,15 @@
 
           <!-- Section - Projects -->
           <section id="projects" class="wrapper">
-              <h1 class="title-white">Projects</h2>
-                <h1 class = 'title-about-white'>Put projects here.
-                and some more projects. and some more projects.
-                and some more projects. and some more projects.</h1>
+              <h1 class="title-white">Projects</h1>
+              <table>
+                {% for elem in projects %}
+                  <tr>
+                    <th> {{elem.0}} </th>
+                    <td> {{elem.1}} </td>
+                  </tr>
+                {% endfor %}
+              </table>
           </section>
           <!-- End Section - Projects -->
         <!-- End Right Side -->
