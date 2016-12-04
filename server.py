@@ -1,8 +1,13 @@
 from flask import Flask, render_template, url_for, request, redirect
+from functools import wraps
 app = Flask(__name__)
 
-announcementsLog = []
 
+def checkAuth(password):
+    f = open('static/cred.txt')
+    return password == f.readline().rstrip()
+
+announcementsLog = []
 def getAnnouncements():
     return announcementsLog
 
@@ -18,10 +23,12 @@ def submitAnnouncement():
     if request.method == 'POST':
         header = str(request.form['Header'])
         body = str(request.form['Body'])
-        announcementsLog.append([header, body])
+        cred = str(request.form['Cred'])
+        print cred
+        if checkAuth(cred):
+            announcementsLog.append([header, body])
         return redirect(url_for('index'))
     return 404
-
 
 if __name__ == '__main__':
     app.run(debug = True)
