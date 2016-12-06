@@ -163,6 +163,13 @@
       height: 0%;
     }
 
+  .imageWindowResize {
+    position: absolute;
+    z-index: 2000;
+    top: 30%;
+    left: 26%;
+  }
+
   .right {
     margin-top: auto;
     width: 100%;
@@ -184,7 +191,7 @@
   }
 
   .title-about-white{
-    text-align: center;;
+    text-align: center;
     color: white;
     font-size: 17.5px;
     font-family: Futura, “Trebuchet MS”, Arial, sans-serif;
